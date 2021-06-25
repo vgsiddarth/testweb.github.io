@@ -125,7 +125,39 @@
 						
 					<script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='https://assets.freshsales.io/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init('https://siddarth-org.myfreshworks.com/crm/sales','0e2c23fa604308df079c2df163c7b5d8a5bf55cd9004a4732f5a635f365e6e13',true);}})();</script>
 
+                                         <script>
 
+var WebFormEvent =
+{
+
+afterInstall: function()
+
+{
+console.log("After installation hook triggered.");        
+}
+
+,
+
+beforeSubmit: function()
+
+{
+
+console.log("Before submit hook triggered.");        
+}
+
+,
+
+afterSubmit: function(event, data, error)
+
+{          
+console.log("After submit hook triggered.");          
+console.log("Data => ",data);
+if(error)\{ console.log("Error => ",error); }
+
+}
+
+}
+</script>
 					</div>
 					<div class="col-md-5 col-md-push-1">
 						<div class="gtco-contact-info">
